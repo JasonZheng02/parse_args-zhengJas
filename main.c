@@ -12,8 +12,8 @@ int main(){
 }
 
 char ** parse_args( char * line ){
-  char * args[5];
   char * curr = line;
+  char ** args = malloc(100);
   int x;
   for (x = 0; curr != NULL; x++){
     args[x] = strsep (&curr, " ");
